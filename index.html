@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manan- Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --bodytxt-color:white;
+            --body-backcolor:rgb(0,0,31);
+            --nav-backcolor:rgb(17, 17, 78);
+            --nav-hovercolor:yellow;
+            --mainhr-color:rgb(102, 102, 177);
+            --text-graycolor:grey;
+            --leftsecbtn-color:#1e2167;
+            --purple-color:rgb(171, 100, 237);
+            --aquamarine-color:aquamarine;
+            --footer:#0e0e1a;
+            --footertxt-color:white;
+        }
+        .dark-theme{
+            --bodytxt-color:black;
+            --body-backcolor:#e0aaff;
+            --nav-backcolor:#9b5de5;
+            --nav-hovercolor:#4cc9f0;
+            --mainhr-color:#f15bb5;
+            --text-graycolor:grey;
+            --leftsecbtn-color:#9b5de5;
+            --purple-color:#f15bb5;
+            --aquamarine-color:#001d3d;
+            --footer:#47126b;
+            --footertxt-color:white;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--body-backcolor);
+            color: var(--bodytxt-color);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: var(--nav-backcolor);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--bodytxt-color);
+        }
+
+        nav ul li a:hover {
+            color:var(--nav-hovercolor);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border: 0;
+            background: var(--mainhr-color);
+            height: 1.3px;
+            margin: 60px 86px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 130px 0;
+
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 2rem;
+        }
+
+        .leftsection .buttons {
+            padding: 25px 0;
+        }
+
+        .leftsection .btn {
+            padding: 10px;
+            background: var(--leftsecbtn-color);
+            color: var(--bodytxt-color);
+            border: 2px solid var(--bodytxt-color);
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .rightsection img {
+            width: 80%;
+        }
+
+        .text-gray {
+            color: var(--text-graycolor);
+        }
+
+        .purple {
+            color: var(--purple-color);
+        }
+
+        #element {
+            color: var(--aquamarine-color);
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondsection h1 {
+            font-size: 1.5rem;
+        }
+
+        .secondsection .box {
+            background: var(--bodytxt-color);
+            width: 77vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondsection .vertical {
+            height: 94px;
+            width: 1px;
+            background-color: var(--bodytxt-color);
+            margin: 0 120px;
+        }
+
+        .image-top {
+            width: 50px;
+            position: relative;
+            top: -55px;
+            left: -20px;
+        }
+        .image-top2 {
+            width: 90px;
+            position: relative;
+            top: -55px;
+            left: -45px;
+        }
+        .image-top3 {
+            width: 70px;
+            position: relative;
+            top: -65px;
+            left: -30px;
+        }
+        .image-top4 {
+            width: 70px;
+            position: relative;
+            top: -50px;
+            left: -30px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 40px;
+            width: 150px;
+            font-size: 15px;
+        }
+        .vertical-title2 {
+            position: relative;
+            top: 40px;
+            width: 150px;
+            font-size: 15px;
+        }
+        .vertical-title3 {
+            position: relative;
+            top: 20px;
+            width: 150px;
+            font-size: 15px;
+        }
+        .vertical-title4 {
+            position: relative;
+            top: 49px;
+            width: 150px;
+            font-size: 15px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 58px;
+            color: var(--text-graycolor);
+            width: 150px;
+            font-size: 9px;
+        }
+        .vertical-desc2 {
+            position: relative;
+            top: 60px;
+            color: var(--text-graycolor);
+            width: 150px;
+            font-size: 9px;
+        }
+        .vertical-desc3 {
+            position: relative;
+            top: 40px;
+            color: var(--text-graycolor);
+            width: 150px;
+            font-size: 9px;
+        }
+        .vertical-desc4 {
+            position: relative;
+            top: 59px;
+            color: var(--text-graycolor);
+            width: 150px;
+            font-size: 9px;
+        }
+        footer {
+            background-color: var(--footer);
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: var(--text-graycolor);
+            padding: 12px 0;
+        }
+        h3{
+            color: var(--footertxt-color) ;
+        }
+        footer li{
+            color: var(--footertxt-color);
+        }
+        #dark {
+            cursor: pointer;
+            width: 22px;
+        }
+        /* ###btn### */
+        .ui-btn {
+  --btn-default-bg: rgb(41, 41, 41);
+  --btn-padding: 15px 20px;
+  --btn-hover-bg: rgb(51, 51, 51);
+  --btn-transition: 0.3s;
+  --btn-letter-spacing: 0.1rem;
+  --btn-animation-duration: 1.2s;
+  --btn-shadow-color: rgba(0, 0, 0, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: lime;
+  --default-btn-color: #fff;
+  --font-size: 16px;
+  /* 👆 this field should not be empty */
+  --font-weight: 600;
+  --font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */
+}
+#cont{
+    text-decoration: none;
+    color: var(--bodytxt-color);
+}
+/* button settings 👆 */
+
+
+        /* ###### */
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Manan's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="https://github.com/GoelManan10">Projects</a></li>
+                    <li><img src="dark.png.png" id="dark" /></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My name is <span class="purple">Manan</span>
+                <div> and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="trialport.jpeg" style="text-decoration: none;" download>   
+                    <button class="btn">Download Resume</button>
+                   
+                      
+                    </a>
+                    <a href="https://github.com/GoelManan10" target="_blank" style="text-decoration: none;">
+                    <button class="btn">Visit Github</button>
+                    
+                    </a>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="pix.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Work Experience</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="html-5.png" alt="">
+                    <div class="vertical-title">
+                        Web Developer (2018-2020)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iure molestias impedit tenetur.
+                        Commodi corrupti dolor assumenda quos temporibus, sit obcaecati illum tempora repellendus dolore
+                        doloribus unde! Ratione, porro sequi.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top2" src="js2.webp" alt="">
+                    <div class="vertical-title2">
+                        Javascript (2020-2021)
+                    </div>
+                    <div class="vertical-desc2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iure molestias impedit
+                        tenetur.
+                        Commodi corrupti dolor assumenda quos temporibus, sit obcaecati illum tempora repellendus
+                        dolore
+                        doloribus unde! Ratione, porro sequi.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top3" src="insta4.jpeg" alt="">
+                    <div class="vertical-title3">
+                        Instagram (2021-2022)
+                    </div>
+                    <div class="vertical-desc3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iure molestias impedit
+                        tenetur.
+                        Commodi corrupti dolor assumenda quos temporibus, sit obcaecati illum tempora repellendus
+                        dolore
+                        doloribus unde! Ratione, porro sequi.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top4" src="WhatsApp-logo.png" alt="">
+                    <div class="vertical-title4">
+                        Whatsapp (2022-2023)
+                    </div>
+                    <div class="vertical-desc4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iure molestias impedit
+                        tenetur.
+                        Commodi corrupti dolor assumenda quos temporibus, sit obcaecati illum tempora repellendus
+                        dolore
+                        doloribus unde! Ratione, porro sequi.
+
+                    </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Manan'S Developer Portfolio</h3>
+            </div>
+           
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <a href="contact.html" id="cont">
+                    <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-rights">
+            Copyright&#169;manansportfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var icon = document.getElementById("dark");
+
+icon.onclick = function () {
+  document.body.classList.toggle("dark-theme");
+  if (document.body.classList.contains("dark-theme")) {
+    icon.src = "lightmode.svg";
+  } else {
+    icon.src = "dark.png.png";
+  }
+};
+        var typed = new Typed('#element', {
+            strings: ['Software Engineer', 'Graphic Designer.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
